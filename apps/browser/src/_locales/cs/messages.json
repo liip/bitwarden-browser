@@ -1,9 +1,9 @@
 {
   "appName": {
-    "message": "Bitwarden"
+    "message": "Liip-Bitwarden"
   },
   "extName": {
-    "message": "Bitwarden – Bezplatný správce hesel",
+    "message": "Liip-Bitwarden – Bezplatný správce hesel",
     "description": "Extension name, MUST be less than 40 characters (Safari restriction)"
   },
   "extDesc": {
