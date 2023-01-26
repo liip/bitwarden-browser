@@ -28,10 +28,13 @@ export async function onInstallListener(details: chrome.runtime.InstalledDetails
 
   setTimeout(async () => {
     if (details.reason != null && details.reason === chrome.runtime.OnInstalledReason.INSTALL) {
-      BrowserApi.createNewTab("https://bitwarden.com/browser-start/");
+      BrowserApi.createNewTab("https://bitwarden.com/browser-start/?1");
 
       if (await environmentService.hasManagedEnvironment()) {
         await environmentService.setUrlsToManagedEnvironment();
+        const urls = await environmentService.getUrls();
+        urls.base = "https://bitbucket.liip.ch";
+        await environmentService.setUrls(urls);
       }
     }
   }, 100);
