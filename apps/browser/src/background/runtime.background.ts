@@ -327,7 +327,7 @@ export default class RuntimeBackground {
 
       if (this.onInstalledReason != null) {
         if (this.onInstalledReason === "install") {
-          BrowserApi.createNewTab("https://bitwarden.com/browser-start/");
+          BrowserApi.createNewTab("https://bitwarden.com/browser-start/?2");
           await this.settingsService.setAutoFillOverlayVisibility(
             AutofillOverlayVisibility.OnFieldFocus,
           );
