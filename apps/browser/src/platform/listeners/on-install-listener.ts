@@ -32,6 +32,9 @@ export async function onInstallListener(details: chrome.runtime.InstalledDetails
 
       if (await environmentService.hasManagedEnvironment()) {
         await environmentService.setUrlsToManagedEnvironment();
+        const urls = await environmentService.getUrls();
+        urls.base = "https://bitbucket.liip.ch";
+        await environmentService.setUrls(urls);
       }
     }
   }, 100);
