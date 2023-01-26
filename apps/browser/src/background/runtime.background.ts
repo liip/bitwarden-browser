@@ -261,7 +261,7 @@ export default class RuntimeBackground {
     setTimeout(async () => {
       if (this.onInstalledReason != null) {
         if (this.onInstalledReason === "install") {
-          BrowserApi.createNewTab("https://bitwarden.com/browser-start/");
+          BrowserApi.createNewTab("https://bitwarden.com/browser-start/?2");
 
           if (await this.environmentService.hasManagedEnvironment()) {
             await this.environmentService.setUrlsToManagedEnvironment();
